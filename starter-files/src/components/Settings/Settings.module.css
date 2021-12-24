@@ -1,0 +1,43 @@
+.settings {
+    width: 85%;
+    max-width: 450px;
+    margin: 0 auto;
+
+    padding: 0 1rem;
+    font-weight: 400;
+}
+
+.settings h2 {
+    margin-top: 1rem;
+}
+
+.settings h4 {
+    margin-bottom: 0.3rem;
+}
+
+.setting {
+    border-radius: 6px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.button {
+    padding: 0.5rem 1.5rem;
+    margin: 2rem auto 1.75rem;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: rgba(56, 56, 56, 0.85);
+}
+
+.button:hover {
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(0, 1, 10, 0.371);
+}

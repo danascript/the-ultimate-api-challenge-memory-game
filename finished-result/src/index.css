@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    color: rgba(56, 56, 56, 0.75);
+    overflow-x: hidden;
+    background-color: #54acff;
+    background-image: linear-gradient(43deg, #54acff 0%, #c67aff 46%, #ff84b3 100%);
+    overflow-y: hidden;
+}
+
+button {
+    outline-color: #006d77;
+}
+
+h1 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.frosted {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}

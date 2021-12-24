@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    font-weight: 400;
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.button {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: rgba(56, 56, 56, 0.85);
+    margin-bottom: 1rem;
+}
+
+.button:hover {
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 8px 32px 0 rgba(0, 1, 10, 0.371);
+}

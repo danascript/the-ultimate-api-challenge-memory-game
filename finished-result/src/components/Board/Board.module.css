@@ -1,0 +1,14 @@
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    margin-left: 1rem;
+    overflow-x: scroll;
+}
+
+.board ul {
+    margin: 0;
+}
