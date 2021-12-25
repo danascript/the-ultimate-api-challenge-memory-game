@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Image = ({ url }) => (
     <div>
-        <img src={url} width="200" alt="" />
+        <img src={url} alt="" width="200" />
     </div>
 );
 

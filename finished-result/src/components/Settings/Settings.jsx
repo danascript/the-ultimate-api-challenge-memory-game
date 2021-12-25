@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { PACE, CATEGORIES, INITIAL_CARDS_COUNT } from '../../constants.js';
+import { CATEGORIES, PACE, INITIAL_CARDS_COUNT } from './../../constants.js';
 
-import Counter from '../Counter';
 import RadioBox from '../RadioBox';
+import Counter from '../Counter';
 
 import styles from './Settings.module.css';
 
 const Settings = ({ startGame }) => {
-    const [pace, setPace] = useState(PACE[0]);
     const [category, setCategory] = useState(CATEGORIES[0]);
-    const [cardsCount, setCardCount] = useState(INITIAL_CARDS_COUNT);
+    const [pace, setPace] = useState(PACE[0]);
+    const [cardsCount, setCardsCount] = useState(INITIAL_CARDS_COUNT);
 
     const onStartGameClick = () => {
         startGame({ category, pace, cardsCount });
@@ -22,7 +22,7 @@ const Settings = ({ startGame }) => {
             <h2>Settings</h2>
 
             <h4>Category:</h4>
-            <div className={styles.setting}>
+            <div className={`${styles.setting}`}>
                 {CATEGORIES.map(item => (
                     <RadioBox
                         key={item}
@@ -34,12 +34,12 @@ const Settings = ({ startGame }) => {
             </div>
 
             <h4>Amount of cards:</h4>
-            <div className={styles.setting}>
-                <Counter count={cardsCount} onClick={setCardCount} />
+            <div className={`${styles.setting}`}>
+                <Counter cardsCount={cardsCount} onClick={setCardsCount} />
             </div>
 
             <h4>Pace:</h4>
-            <div className={styles.setting}>
+            <div className={`${styles.setting}`}>
                 {PACE.map(item => (
                     <RadioBox key={item} name={item} selectedItem={pace} onChange={e => setPace(e.target.value)} />
                 ))}

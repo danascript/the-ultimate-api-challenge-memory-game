@@ -1,33 +1,19 @@
-import { useState, useEffect } from 'react';
-/**
- * state:
- *
- * pics [
- * [
- *   {
- *     id: // to match the pair, can be just the index of it
- *     url: // to display the img
- *     isShown: // to show the card of the image
- *     isFound: // to know if a match was found
- *   }
- * ]
- *
- */
+import { useEffect, useState } from 'react';
 
 const getRandomPage = () => Math.round(Math.random() * (10 - 1) + 1);
 
-const useGetImages = options => {
+const useGetImages = gameOptions => {
     const [images, setImages] = useState([]);
 
     const buildUrl = () => {
         let url = new URL('https://api.pexels.com/v1/search');
 
         url.search = new URLSearchParams({
-            page: getRandomPage(),
-            query: options.category,
-            size: 'small',
+            query: gameOptions.category,
             orientation: 'square',
-            per_page: options.count / 2,
+            size: 'small',
+            per_page: gameOptions.cardsCount / 2,
+            page: getRandomPage(),
         });
 
         return url;
@@ -37,7 +23,6 @@ const useGetImages = options => {
         fetch(buildUrl(), {
             headers: {
                 Authorization: process.env.REACT_APP_AUTH_KEY,
-                'Content-Type': 'application/json',
             },
         })
             .then(data => data.json())
@@ -45,13 +30,11 @@ const useGetImages = options => {
     };
 
     useEffect(() => {
-        if (!options) return;
+        if (!gameOptions) return;
         fetchPics();
-    }, []);
+    }, [gameOptions]);
 
-    return {
-        images,
-    };
+    return images;
 };
 
 export default useGetImages;

@@ -5,17 +5,17 @@ import './Counter.css';
 
 const STEP = 2;
 
-const Counter = ({ count, onClick }) => {
-    const onIncrement = e => {
-        e.preventDefault();
-        const number = count + STEP;
-        if (number <= 160) onClick(number);
-    };
-
+const Counter = ({ cardsCount, onClick }) => {
     const onDecrement = e => {
         e.preventDefault();
-        const number = count - STEP;
+        const number = cardsCount - STEP;
         if (number >= 2) onClick(number);
+    };
+
+    const onIncrement = e => {
+        e.preventDefault();
+        const number = cardsCount + STEP;
+        if (number <= 160) onClick(number);
     };
 
     return (
@@ -23,9 +23,7 @@ const Counter = ({ count, onClick }) => {
             <button className="minus" onClick={onDecrement}>
                 -
             </button>
-            <span name="quantity" type="number">
-                {count}
-            </span>
+            <span className="quantity">{cardsCount}</span>
             <button className="plus" onClick={onIncrement}>
                 +
             </button>
@@ -36,6 +34,6 @@ const Counter = ({ count, onClick }) => {
 export default Counter;
 
 Counter.propTypes = {
-    count: PropTypes.number.isRequired,
+    cardsCount: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
 };
