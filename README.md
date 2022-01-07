@@ -33,9 +33,9 @@
 
 <p>This <b>Memory Game API</b> is a fun kick to the regular API projects for beginners in JavaScript, ReactJS, hooks (custom ones too), Fetch and many more!</p>
 
-<p>It's the first API coding challenge of the series where we need to use authorization headers in our request thus a great way to ease into more complexity from our api project ideas for beginners by using env variables, headers and requesting an API KEY</p>
+<p>It's the first API coding challenge of the series where we need to use authorization headers in our request thus a great way to ease into more complexity from our api project ideas for beginners by using env variables, headers and requesting an API KEY.</p>
 
-<p>In this API challenge we will work with passing props, ensuring they are the right ones by using propTypes. Custom hooks are a big part of this project - working with passing and returning things from them, digging a bit more into how the reactivity works and will focus on dividing tasks to different components</p>
+<p>In this API challenge we will work with passing props, ensuring they are the right ones by using propTypes. Custom hooks are a big part of this project - working with passing and returning things from them, digging a bit more into how the reactivity works and will focus on dividing tasks to different components.</p>
 
 <p>Feel free to try out first yourself or jump on the YouTube video from the start, find what works best fo you and enjoy! 🐣
 </p>
